@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
+import Image, { GatsbyImageProps } from 'gatsby-image';
 
 import styles from './AppIcon.module.scss';
 
-const AppIcon: React.FC = () => {
+const AppIcon: React.FC<GatsbyImageProps> = props => {
   const data = useStaticQuery(graphql`
     query {
       icon: file(relativePath: { eq: "icon.png" }) {
@@ -19,7 +19,7 @@ const AppIcon: React.FC = () => {
   `);
   return (
     <div className={`${styles.AppIcon} mx-auto`}>
-      <Image fluid={data.icon.childImageSharp.fluid} />
+      <Image fluid={data.icon.childImageSharp.fluid} {...props} />
     </div>
   );
 };
