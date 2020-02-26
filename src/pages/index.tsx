@@ -8,7 +8,9 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Gatsby Starter" />
-      <AppIcon />
+      <div className="logo mx-auto">
+        <AppIcon />
+      </div>
       <h1 className="text-center">Hello World!</h1>
     </Layout>
   );
