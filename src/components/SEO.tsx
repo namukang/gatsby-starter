@@ -58,18 +58,7 @@ const SEO: React.FC<SEOProps> = ({
     typeof window !== 'undefined'
       ? window.location.origin
       : site.siteMetadata.origin;
-  const imageUrl = origin + imagePath;
-  meta = [
-    ...meta,
-    {
-      property: 'og:image',
-      content: imageUrl,
-    },
-    {
-      name: 'twitter:image',
-      content: imageUrl,
-    },
-  ];
+  const imageUrl = imagePath && new URL(imagePath, origin).href;
 
   return (
     <Helmet
@@ -98,8 +87,16 @@ const SEO: React.FC<SEOProps> = ({
           content: 'website',
         },
         {
+          property: 'og:image',
+          content: imageUrl,
+        },
+        {
+          name: 'twitter:image',
+          content: imageUrl,
+        },
+        {
           name: 'twitter:card',
-          content: 'summary',
+          content: 'summary', // change to 'summary_large_image' for large images
         },
         {
           name: 'twitter:creator',
