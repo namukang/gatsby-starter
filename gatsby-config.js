@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Starter',
     description: 'Starter kit for Gatsby by DK',
     // Twitter username
-    author: '@dkthehuman',
+    author: '@dk_the_human',
     // Used for constructing Open Graph tags with SSR
     origin: 'https://www.dkthehuman.com',
   },
