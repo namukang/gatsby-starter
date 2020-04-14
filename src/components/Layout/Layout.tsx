@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Footer from 'components/Footer';
+
 import './Layout.scss';
 
 interface LayoutProps {
@@ -8,24 +10,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="container-fluid mt-5 mb-4">
-      <div className="mb-5">{children}</div>
-      <Footer />
-    </div>
-  );
-};
-
-const Footer: React.FC = () => {
-  return (
-    <div className="text-center text-muted">
-      Made by{' '}
-      <a
-        href="https://dkthehuman.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        DK the Human
-      </a>
+    <div className="container-fluid">
+      <div>{children}</div>
+      <div className="my-4">
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,9 @@
+.Avatar {
+  object-fit: cover;
+}
+
+.TextAvatar {
+  $spacing: 0.05rem;
+  letter-spacing: $spacing;
+  text-indent: $spacing;
+}
