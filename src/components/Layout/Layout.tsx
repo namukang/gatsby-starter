@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Navbar />
       <div className="container-fluid">
         <div>{children}</div>
-        <div className="my-4">
+        <div className="border-top bg-light py-4">
           <Footer />
         </div>
       </div>
