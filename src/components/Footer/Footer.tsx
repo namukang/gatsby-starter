@@ -7,10 +7,10 @@ import MakerFooter from 'components/MakerFooter';
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="mb-4">
+      <div className="mb-4 d-flex justify-content-center">
         <CreditsPill />
       </div>
-      <div className="mb-4">
+      <div className="mb-4 d-flex justify-content-center">
         <Promo />
       </div>
       <div>
@@ -23,11 +23,9 @@ const Footer: React.FC = () => {
 
 const CreditsPill: React.FC = () => {
   return (
-    <div className="d-flex justify-content-center">
-      <div className="border rounded-pill bg-white py-2 px-3 text-muted">
-        Crafted for your well-being by{' '}
-        <LinkExternal href="https://dkthehuman.com">DK the Human</LinkExternal>
-      </div>
+    <div className="border rounded-pill bg-white py-2 px-3 text-muted">
+      Crafted for your well-being by{' '}
+      <LinkExternal href="https://dkthehuman.com">DK the Human</LinkExternal>
     </div>
   );
 };

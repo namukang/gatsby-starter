@@ -34,21 +34,19 @@ const APPS: App[] = [
 
 const Promo: React.FC = () => {
   return (
-    <div className="d-flex justify-content-center">
-      <div>
-        <h5 className="text-muted text-center">More by DK</h5>
-        <div className="list-group">
-          {APPS.filter(app => app.name !== APP_NAME).map(app => (
-            <LinkExternal
-              key={app.name}
-              href={app.url}
-              className="list-group-item list-group-item-action"
-            >
-              {app.icon} {app.name} -{' '}
-              <span className="text-muted">{app.description}</span>
-            </LinkExternal>
-          ))}
-        </div>
+    <div>
+      <h5 className="text-muted text-center">More by DK</h5>
+      <div className="list-group">
+        {APPS.filter(app => app.name !== APP_NAME).map(app => (
+          <LinkExternal
+            key={app.name}
+            href={app.url}
+            className="list-group-item list-group-item-action"
+          >
+            {app.icon} {app.name} -{' '}
+            <span className="text-muted">{app.description}</span>
+          </LinkExternal>
+        ))}
       </div>
     </div>
   );
