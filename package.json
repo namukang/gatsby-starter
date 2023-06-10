@@ -6,7 +6,7 @@
   "author": "DK <dk@dkthehuman.com>",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "gatsby": "^2.19.41",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.43",
     "gatsby-plugin-google-tagmanager": "^2.1.26",
     "gatsby-plugin-manifest": "^2.2.47",
